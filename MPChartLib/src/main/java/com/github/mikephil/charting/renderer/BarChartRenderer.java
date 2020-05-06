@@ -132,9 +132,9 @@ public class BarChartRenderer extends BarLineScatterCandleBubbleRenderer {
                 c.drawRect(mBarShadowRectBuffer, mShadowPaint);
             }
         }
-
+try {
         // initialize the buffer
-        BarBuffer buffer = mBarBuffers[0];
+        BarBuffer buffer = mBarBuffers[index];
         buffer.setPhases(1.0f, 1.0f);
         buffer.setDataSet(index);
         buffer.setInverted(mChart.isInverted(dataSet.getAxisDependency()));
@@ -186,6 +186,9 @@ public class BarChartRenderer extends BarLineScatterCandleBubbleRenderer {
                         buffer.buffer[j + 3], mBarBorderPaint);
             }
         }
+    }catch (Exception e){
+    e.printStackTrace();
+}
     }
 
     protected void prepareBarHighlight(float x, float y1, float y2, float barWidthHalf, Transformer trans) {
