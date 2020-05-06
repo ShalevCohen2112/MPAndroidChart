@@ -134,7 +134,7 @@ public class BarChartRenderer extends BarLineScatterCandleBubbleRenderer {
         }
 
         // initialize the buffer
-        BarBuffer buffer = mBarBuffers[index];
+        BarBuffer buffer = mBarBuffers[0];
         buffer.setPhases(1.0f, 1.0f);
         buffer.setDataSet(index);
         buffer.setInverted(mChart.isInverted(dataSet.getAxisDependency()));
